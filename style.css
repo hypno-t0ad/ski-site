@@ -68,6 +68,12 @@ img {
     color: var(--white-text);
 }
 
+.check {
+
+    width: 2rem;
+    height: auto;
+
+}
 
 /* Ski_board page */
 .youtube {
