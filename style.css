@@ -1,0 +1,141 @@
+* {
+    /* Global Styles */
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body,
+html,
+.container-fluid {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+}
+
+.navbar {
+    border-bottom: solid 3px #008ed6;
+    opacity: 0.8;
+    z-index: 9999;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* END OF GLOBAL STYLES #############################*/
+
+
+/* CSS VARIABLES*/
+:root {
+    --white-text: #fff;
+    --circle-img: 50%
+}
+
+/* Home page #############################*/
+#home {
+    height: 100vh;
+    width: 100%;
+}
+
+.background {
+    /* sets vid bg position */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.header {
+    position: relative;
+    color: var(--white-text);
+    bottom: 100px;
+}
+
+.circle-img {
+    border-radius: var(--circle-img);
+}
+
+#services,
+.footer a,
+#music,
+.youtube-container {
+    color: var(--white-text);
+}
+
+
+/* Ski_board page */
+.youtube {
+    /* Sets youtube div to relative and adds padding to bottom so aspect ratio is kept */
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+}
+
+.youtube iframe {
+    /* Absolutely positions youtube video within div */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50%;
+    max-height: 70%;
+}
+
+.hero-header a {
+    text-decoration: none;
+    color: darkslategrey;
+}
+
+.hero-header a:hover {
+    color: darkorange;
+}
+
+/* Footer */
+
+.footer {
+    height: fit-content;
+}
+
+/* MEDIA QUERIES #############################*/
+@media only screen and (max-width: 992px) {
+
+    .header { 
+        bottom: 200px;
+    }
+
+    .display-2 {
+        font-size: 2.5rem;
+    }
+
+    .display-3 {
+        font-size: 2rem;
+    }
+
+    .display-4 {
+        font-size: 1rem;
+    }
+
+    .background {
+        display: none;
+    }
+
+    #home { /* Changes background on index from video to image */
+        background-image: url(https://source.unsplash.com/XT5OInaElMw/1600x900);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        margin: 0;
+    }
+
+    #ski {
+        position: relative;
+        bottom: 50px;
+    }
+}
